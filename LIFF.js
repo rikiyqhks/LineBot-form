@@ -1,10 +1,10 @@
-$(document).ready(function () {
+$(document).ready(() => {
     var liffId = "1661217157-q0V6M8y5";
     console.log(`init liff, ID : ${liffId}`);
     initializeLiff(liffId);
-})
+});
 
-function initializeLiff(liffId) {
+const initializeLiff = (liffId) => {
     liff
         .init({
             liffId: liffId
@@ -23,7 +23,7 @@ function initializeLiff(liffId) {
         });
 }
 
-function sendText(text) {
+const sendText = (text) => {
     if (!liff.isInClient()) {
         shareTargetPicker(text);
     } else {
@@ -33,20 +33,20 @@ function sendText(text) {
 
 
 // LINEトーク画面上でメッセージ送信
-function sendMessages(text) {
+const sendMessages = (text) => {
     console.log('in sendMessages()');
     liff.sendMessages([{
         'type': 'text',
         'text': text
-    }]).then(function () {
+    }]).then(() => {
         liff.closeWindow();
-    }).catch(function (error) {
+    }).catch((error) => {
         window.alert('Failed to send message ' + error);
     });
 }
 
 // Webブラウザからメッセージ送信
-function shareTargetPicker(text) {
+const shareTargetPicker = (text) => {
     console.log('in shareTargetPicker');
     liff.shareTargetPicker([{
         'type': 'text',
