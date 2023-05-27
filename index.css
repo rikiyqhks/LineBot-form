@@ -69,8 +69,8 @@ input::-webkit-outer-spin-button {
 .select {
     display: inline-block;
     position: relative;
-    border: 1px solid #eee;
     vertical-align: middle;
+    margin: 10px auto;
 }
 
 .select select {
@@ -91,14 +91,12 @@ input::-webkit-outer-spin-button {
     color: #727272;
 }
 
-.form textarea {
-    width: 100%;
-}
-
 .form-textarea {
     display: block;
     width: 100%;
     border-radius: 4px;
+    margin: 10px auto;
+    padding: 11px 15px;
     border: none;
     box-shadow: 0 0 0 1px #ccc inset;
     appearance: none;
@@ -116,7 +114,7 @@ input::-webkit-outer-spin-button {
     width:  120px;
     height: 50px;
     text-align: center;
-    margin: 16px auto;
+    margin: 30px auto;
     background-color: #5CB8E4;
     border-radius: 25px;
 }
