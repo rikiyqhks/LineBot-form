@@ -1,4 +1,4 @@
-const onSubmit = () =>{
+const onSubmit = () => {
     const grade = document.getElementById('grade').value;
     let class_rank = document.getElementById('class_rank').value;
     let class_type = document.getElementById('class_type').value;
