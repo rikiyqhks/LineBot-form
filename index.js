@@ -9,7 +9,7 @@ const onSubmit = () => {
         class_type = document.getElementById('other_class_type').value;
     }
     if (major == "その他専攻") {
-        class_type = document.getElementById('other_major').value;
+        major = document.getElementById('other_major').value;
     }
 
     const msg = "【登録内容】\n" + `[クラス] ${grade}${class_rank} \n` + `[学科] ${class_type} \n` + `[専攻] ${major} \n` + `[学籍番号] ${sNumber}`;
