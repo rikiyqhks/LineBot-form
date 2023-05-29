@@ -1,16 +1,24 @@
 const onSubmit = () => {
     const grade = document.getElementById("grade").value;
-    let class_rank = document.getElementById("class_rank").value;
+    const class_rank = document.getElementById("class_rank").value;
     let class_type = document.getElementById("class_type").value;
-    const major = document.getElementById("major").value;
+    let major = document.getElementById("major").value;
     const sNumber = document.getElementById("sNumber").value;
 
     if (validation_check(grade, class_rank, class_type, major, sNumber)) {
         if (class_type == "その他学科") {
             class_type = document.getElementById("other_class_type").value;
+            if (String(class_type).length === 0) {
+                alert("学科を入力してください。");
+                return false;
+            }
         }
         if (major == "その他専攻") {
             major = document.getElementById("other_major").value;
+            if (String(major).length === 0) {
+                alert("専攻を選択してください。");
+                return false;
+            }
         }
     
         const msg = "【登録内容】\n" + `[クラス] ${grade}${class_rank} \n` + `[学科] ${class_type} \n` + `[専攻] ${major} \n` + `[学籍番号] ${sNumber}`;
