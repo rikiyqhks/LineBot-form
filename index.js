@@ -24,12 +24,13 @@ const onSubmit = () => {
 const validation_check = (grade, class_rank, class_type, major, sNumber) => {
     const grade_list = [1, 2, 3, 4];
     const class_rank_list = ["C", "CB", "CA", "BC", "B", "BA", "AC", "AB", "A", "飛び級"];
-    const class_type_list = ["スーパーゲームＩＴ科", "ゲームＣＧクリエーター科", "e-sports科", "クリエーター科"];
+    const class_type_list = ["スーパーゲームＩＴ科", "ゲームＣＧクリエーター科",
+    "e-sports科", "クリエーター科", "その他学科"];
     const major_list = ["グラフィックデザイン＆イラスト専攻", "スーパーＣＧ・映像クリエーター専攻",
     "スーパーゲームクリエーター専攻", "e-sportsイベント・マネジメント専攻", "ＡＩエンジニア専攻",
     "ＩＴエンジニア専攻", "ホワイトハッカー専攻", "ゲームグラフィック＆キャラクター専攻",
     "ＣＧクリエーター専攻", "ゲームプログラマー専攻", "e-sportsプロゲーマー専攻",
-    "ネット動画クリエーター専攻", "コミックイラスト＆マンガ専攻", "アニメーション専攻"];
+    "ネット動画クリエーター専攻", "コミックイラスト＆マンガ専攻", "アニメーション専攻", "その他専攻"];
 
     switch (false) {
         case grade_list.includes(parseInt(grade)):
